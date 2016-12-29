@@ -123,39 +123,6 @@ org.opensolaris.opengrok.web.Util"
             </select>
         </td>
     </tr>
-<%-- TODO  Bug 11749
-<%
-    if (projects.size() != 0) {
-        String imgDir = cfg.getCssDir() + "/img/";
-    %>
-    <tr>
-        <td>Project(s)</td>
-        <td>
-            <table class="combo_table" id="combotable">
-                <tbody>
-                    <tr>
-                        <td class="combo_td1"><div class="combo_div4"
-                            style="background: transparent url(<%=
-                                imgDir %>transparent_pixel.gif)
-                                repeat scroll 0% 0%;"><input
-                                class="combo_input1 combo_input" id="project"
-                                name="project" size="25"
-                                value="<%= cfg.getRequestedProjectsAsString()
-                                %>"/></div>
-                        </td>
-                        <td valign="top" align="left" class="combo_td2"
-                            id="combotable_button"><a
-                            onclick='javascript: $("#project").click();
-                            $("#project").click();'/><img style="display: none;"
-                            alt="" src="<%= imgDir %>button2.png"/>
-                        </td>
-                    </tr>
-                </tbody>
-            </table></td>
-    </tr><%
-    }
-%>
---%>
 </table>
 <div id="form-controls">
     <input tabindex="9" class="submit" type="submit" value="Search"/>
@@ -167,16 +134,10 @@ org.opensolaris.opengrok.web.Util"
     if (projects.size() != 0) {
 %>
 <div id="ptbl">
-    <p><label for="project">In Project(s)</label> 
-        <button tabindex="6" type="button"
-        onclick="javascript: selectAllProjects(); return false;"
-        >select all</button>&nbsp;<button tabindex="7" type="button"
-        onclick="javascript: invertAllProjects(); return false;"
-        >invert selection</button>&nbsp;<button tabindex="8" type="button"
-        onclick="javascript: deselectAllProjects(); return false;"
-        >clear</button></p>
+    <p><label for="project">Version</label> 
+        </p>
     <select tabindex="8" class="q" id="project"
-        name="project" multiple="multiple" size="<%=
+        name="project" size="<%=
         Math.min(15, projectsSize) %>"><%
         SortedSet<String> pRequested = cfg.getRequestedProjects();
         for ( Group group : ph.getGroups() ) {
@@ -218,8 +179,6 @@ org.opensolaris.opengrok.web.Util"
         if (ph.getGroups().size() > 0 && ph.getAllUngrouped().size() > 0) {
             %></optgroup><%
         }
-
-
     %></select>
 </div><%
     }
