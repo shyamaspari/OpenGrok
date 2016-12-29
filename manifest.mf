@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.7
+Created-By: 1.8.0_112-b15 (Oracle Corporation)
+Class-Path: lib/ant.jar lib/jrcs.jar lib/json-simple-1.1.1.jar lib/bce
+ l-6.0.jar lib/lucene-analyzers-common-6.3.0.jar lib/lucene-core-6.3.0
+ .jar lib/lucene-queryparser-6.3.0.jar lib/lucene-suggest-6.3.0.jar li
+ b/servlet-api-2.5.jar lib/swing-layout-0.9.jar lib/derbyclient.jar li
+ b/derby.jar
+
