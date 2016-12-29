@@ -253,7 +253,7 @@ public final class Configuration {
         setProjects(new ArrayList<>());
         setGroups(new TreeSet<>());
         setRepositories(new ArrayList<>());
-        setUrlPrefix("/source/s?");
+        setUrlPrefix("/TWXGrok/s?");
         //setUrlPrefix("../s?"); // TODO generate relative search paths, get rid of -w <webapp> option to indexer !
         setCtags(System.getProperty("org.opensolaris.opengrok.analysis.Ctags", "ctags"));
         //below can cause an outofmemory error, since it is defaulting to NO LIMIT
